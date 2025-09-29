@@ -1,11 +1,11 @@
-
+#include <string>
 #include <iostream>
 #include <cstring>   // for strlen, strcpy
 
 // TODO: function prototypes
 
 void addStudent(char* name, double gp, char* names[], double gpas[], int& size, int capacity);
-void updateGPA(double gpa, double newGpa);
+void updateGPA(double* gpa, double newGpa);
 void printStudent(const char* name, const double& gpa);
 double averageGPA(const double gpas[], int size);
 
@@ -78,7 +78,7 @@ int main(int argc, char* argv[]) {
 
                 int len = temp.length();
                 char* name = new char[len + 1];
-                std::strcpy(name, temp.c_str()); //Check this line over
+                std::strcpy(name, temp.c_str());
 
                 std::cout << "Enter GPA: " << std::endl;
                 double gpa = 0.0;
