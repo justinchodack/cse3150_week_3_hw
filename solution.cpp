@@ -97,12 +97,13 @@ int main(int argc, char* argv[]) {
                 std::cout << "Enter student number" << std::endl;
                 int student;
                 std::cin >> student;
+                if(student >= 0 && student < size){
+                    std::cout << "Enter new GPA: " << std::endl;
+                    double newGpa = 0.0;
+                    std::cin >> newGpa;
 
-                std::cout << "Enter new GPA: " << std::endl;
-                double newGpa = 0.0;
-                std::cin >> newGpa;
-
-                updateGPA(&gpas[student], newGpa);
+                    updateGPA(&gpas[student], newGpa);
+                }
                 break;
             }
             case 3: {
